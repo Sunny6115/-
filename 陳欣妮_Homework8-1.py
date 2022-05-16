@@ -5,7 +5,7 @@ import time
 chrome = webdriver.Chrome()#使用程控瀏覽器
 chrome.get("https://www.gmail.com")#至該網站
 time.sleep(0.5)
-inputBar = chrome.find_element_by_tag_name("Xb9hP")
+inputBar = chrome.find_element_by_tag_name("inputWrapper")
 inputBar.send_keys("player333617@gmail.com")
 time.sleep(0.5)
 inputBar.send_keys(Keys.ENTER)
