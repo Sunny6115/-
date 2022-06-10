@@ -26,10 +26,12 @@ def GoogleSearch(search):
         if img_tag:
             img_url = img_tag.get_attribute('src')
             imgRespond = requests.get(img_url)
-            with open("image\\"+'puppy'+str(i)+".jpg","bw") as file:
+            with open("image\\"+search+str(i)+".jpg","bw") as file:
                 file.write(imgRespond.content)
         if i ==30:
             break
         i+=1
     time.sleep(0.5)
-chrome.close()
+    chrome.close()
+    
+GoogleSearch(search)
